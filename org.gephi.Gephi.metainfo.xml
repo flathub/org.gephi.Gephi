@@ -25,18 +25,23 @@
   <screenshots>
     <screenshot type="default">
       <image>https://upload.wikimedia.org/wikipedia/commons/2/27/Gephi-07beta-screenshot.png</image>
+      <caption>Main window showing analysis overview</caption>
     </screenshot>
     <screenshot>
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2022/01/preview4.png</image>
+      <caption>Main window showing analysis preview</caption>
     </screenshot>
     <screenshot>
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2022/01/metricsresults.png</image>
+      <caption>Windows showing metric results</caption>
     </screenshot>
     <screenshot>
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2022/01/layout2.png</image>
+      <caption>Example of visualization of layout</caption>
     </screenshot>
     <screenshot>
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2022/01/neighbours.png</image>
+      <caption>Example of visualization of neighbours</caption>
     </screenshot>
   </screenshots>
   <url type="bugtracker">https://github.com/gephi/gephi/issues</url>
