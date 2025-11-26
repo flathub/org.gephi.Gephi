@@ -29,5 +29,5 @@ modules:
           version-query: .tag_name | gsub("v";"")
           url-query: '"https://github.com/gephi/gephi/releases/download/v" + $version
             + "/gephi-" + $version + "-linux-x64.tar.gz"'
-      - type: path
+      - type: patch
         path: fix-metainfo.diff
