@@ -1,6 +1,6 @@
 app-id: org.gephi.Gephi
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: gephi
 
@@ -15,14 +15,12 @@ modules:
   - name: gephi
     buildsystem: simple
     build-commands:
-      - tar -xf gephi.tar.gz
-      - rm -rf gephi.tar.gz
-      - mv gephi-*/{bin,etc,extra,gephi,jre-x64,platform} /app
-      - install -D --mode=0644 gephi.png /app/share/icons/hicolor/512x512/apps/org.gephi.Gephi.png
-      - install -D --mode=0644 --target-directory=/app/share/applications/ org.gephi.Gephi.desktop
-      - install -D --mode=0644 --target-directory=/app/share/metainfo/ org.gephi.Gephi.metainfo.xml
+      - mv {bin,etc,extra,gephi,jre-x64,platform} /app
+      - install -D --mode=0644 flathub/gephi.png /app/share/icons/hicolor/512x512/apps/org.gephi.Gephi.png
+      - install -D --mode=0644 --target-directory=/app/share/applications/ flathub/org.gephi.Gephi.desktop
+      - install -D --mode=0644 --target-directory=/app/share/metainfo/ flathub/org.gephi.Gephi.metainfo.xml
     sources:
-      - type: file
+      - type: archive
         url: https://github.com/gephi/gephi/releases/download/v0.10.1/gephi-0.10.1-linux-x64.tar.gz
         sha256: f6c2cf4c3c3f07ff9e26249db2fc17fe1b22a592c551c88fc695695520fff378
         x-checker-data:
@@ -31,12 +29,5 @@ modules:
           version-query: .tag_name | gsub("v";"")
           url-query: '"https://github.com/gephi/gephi/releases/download/v" + $version
             + "/gephi-" + $version + "-linux-x64.tar.gz"'
-        dest-filename: gephi.tar.gz
-        only-arches:
-          - x86_64
-      - type: file
-        path: org.gephi.Gephi.desktop
-      - type: file
-        path: org.gephi.Gephi.metainfo.xml
-      - type: file
-        path: gephi.png
+      - type: patch
+        path: fix-metainfo.diff
