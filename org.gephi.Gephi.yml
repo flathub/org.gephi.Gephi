@@ -21,8 +21,8 @@ modules:
       - install -D --mode=0644 --target-directory=/app/share/metainfo/ flathub/org.gephi.Gephi.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/gephi/gephi/releases/download/v0.11.2/gephi-0.11.2-linux-x64.tar.gz
-        sha256: 430d6e0f93b4603a85c447c84cf0029a57d9f2bd3282721c42efe7c86b78172c
+        url: https://github.com/gephi/gephi/releases/download/v0.11.3/gephi-0.11.3-linux-x64.tar.gz
+        sha256: 9606b49f8c85bcd27ed856b0850f79ecd66234394baaf908ef9870b4c2d71b76
         x-checker-data:
           type: json
           url: https://api.github.com/repos/gephi/gephi/releases/latest
